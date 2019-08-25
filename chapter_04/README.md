@@ -52,7 +52,7 @@ _EXAMPLE_
 
 Input:
 
-<p><img src="figure-4-9.png" alt="Figure 4-9"></p>
+<p align="center"><img src="figure-4-9.png" alt="Figure 4-9"></p>
 
 Output: {2, 1, 3}, {2, 3, 1}
 
