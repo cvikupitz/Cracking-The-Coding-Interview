@@ -48,11 +48,11 @@ Implement a method to perform basic string compression using the counts of repea
 
 #### 1.7 - Rotate Matrix
 
-Given an image represented by an NxN matrix, where each pixel in the image is 4 bytes, write a method to rotate the image by 90 degrees. Can you do this in place?
+Given an image represented by an _NxN_ matrix, where each pixel in the image is 4 bytes, write a method to rotate the image by 90 degrees. Can you do this in place?
 
 #### 1.8 - Zero Matrix
 
-Write an algorithm such that if an element in an MxN matrix is 0, its entire row and column are set to 0.
+Write an algorithm such that if an element in an _MxN_ matrix is 0, its entire row and column are set to 0.
 
 #### 1.9 - String Rotation
 
