@@ -18,9 +18,9 @@ Implement an algorithm to delete a node in the middle (i.e., any node but the fi
 
 _EXAMPLE_
 
-lnput: The node c from the linked list a->b->c->d->e->f
+lnput: The node c from the linked list: a -> b -> c -> d -> e -> f
 
-Result: Nothing is returned, but the new linked list looks like a->b->d->e- >f
+Result: Nothing is returned, but the new linked list looks like: a -> b -> d -> e -> f
 
 #### 2.4 - Partition
 
@@ -38,7 +38,7 @@ You have two numbers represented by a linked list, where each node contains a si
 
 _EXAMPLE_
 
-Input: (7-> 1 -> 6) + (5 -> 9 -> 2). That is, 617 + 295.
+Input: (7 -> 1 -> 6) + (5 -> 9 -> 2). That is, 617 + 295.
 
 Output: 2 -> 1 -> 9. That is, 912.
 
@@ -50,7 +50,7 @@ _EXAMPLE_
 
 lnput: (6 -> 1 -> 7) + (2 -> 9 -> 5). That is, 617 + 295.
 
-Output: 9 - > 1 -> 2. That is, 912.
+Output: 9 -> 1 -> 2. That is, 912.
 
 #### 2.6 - Palindrome
 
@@ -70,7 +70,7 @@ Circular linked list: A (corrupt) linked list in which a node's next pointer poi
 
 _EXAMPLE_
 
-Input: A -> B -> C - > D -> E -> C [the same C as earlier]
+Input: A -> B -> C -> D -> E -> C [the same C as earlier]
 
 Output: C
 
