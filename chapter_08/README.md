@@ -76,6 +76,11 @@ Given a boolean expression consisting of the symbols 0 (false), 1 (true), & (AND
 
 _EXAMPLE_
 
-countEval("1^0|0|1", false) -> 2
+```java
+countEval("1^0|0|1", false) // return 2
+```
 
-countEval("0&0&0&1^1|0", true) -> 10
+```java
+countEval("0&0&0&1^1|0", true) // return 10
+```
+
