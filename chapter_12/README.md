@@ -52,4 +52,4 @@ _align_malloc(1000, 128)_ will return a memory address that is a multiple of 128
 
 #### 12.11 - 2D Alloc
 
-Write a function in C called _my2DAlloc()_ which allocates a two-dimensional array. Minimize the number of calls to _malloc_ and make sure that the memory is accessible by the notation _arr[i] [j]_.
+Write a function in C called _my2DAlloc()_ which allocates a two-dimensional array. Minimize the number of calls to _malloc_ and make sure that the memory is accessible by the notation _arr[i]&nbsp;[j]_.
