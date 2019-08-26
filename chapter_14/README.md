@@ -1,5 +1,9 @@
 # Databases
 
+Questions 1 through 3 refer to the database schema shown below. Each apartment can have multiple tenants, and each tenant can have multiple apartments. Each apartment belongs to one building, and each building belongs to one complex.
+
+<p align="center"><img src="database-schema.png" alt="Database Schema"></p>
+
 #### 14.1 - Multiple Apartments
 
 Write a SOL query to get a list of tenants who are renting more than one apartment.
