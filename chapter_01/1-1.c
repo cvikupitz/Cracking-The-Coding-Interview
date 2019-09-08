@@ -47,7 +47,7 @@ int main(int argc, char **argv) {
         if (isUnique(argv[i]))
             printf("\"%s\" is unique\n", argv[i]);
         else
-            printf("\"%s\" is not unique\n", argv[i]);
+            printf("\"%s\" is NOT unique\n", argv[i]);
 
     return 0;
 }

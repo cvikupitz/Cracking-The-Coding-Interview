@@ -9,7 +9,7 @@
 #include <string.h>
 
 /*
- * Returns 1 if 'str1' is a permutation of 'str2', 0 if otherwise. Does NOT
+ * Returns 1 if 's1' is a permutation of 's2', 0 if otherwise. Does NOT
  * ignore punctuation and whitespace, and is case-sensitive.
  */
 static int isPermutation(char *s1, char *s2) {
@@ -48,7 +48,7 @@ int main(int argc, char **argv) {
     if (isPermutation(argv[1], argv[2]))
         printf("\"%s\" is permutation of \"%s\"\n", argv[1], argv[2]);
     else
-        printf("\"%s\" is not a permutation of \"%s\"\n", argv[1], argv[2]);
+        printf("\"%s\" is NOT a permutation of \"%s\"\n", argv[1], argv[2]);
 
     return 0;
 }
