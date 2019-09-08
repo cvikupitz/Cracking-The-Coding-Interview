@@ -1,8 +1,46 @@
+/**
+ * 1-3.c
+ *
+ * Solution to exercise 1-3 from Cracking the Coding Interview, 6th edition.
+ *
+ */
+
 #include <stdio.h>
+#include <string.h>
 
-static char *URLify(char[] str) {
+/*
+ * Modifies 'str' in place by replacing each space with '%20'.
+ */
+static char *URLify(char str[]) {
 
-    return NULL;
+    int i, len, spaces = 0;
+    char *ch;
+
+    /* Counts each occurence of blank in string */
+    for (ch = str; *ch != '\0'; ch++)
+        if (*ch == ' ')
+            spaces++;
+
+    /* Compute length of new URLified string */
+    i = strlen(str);
+    len = i + (spaces * 2);
+    str[len] = '\0';
+
+    while (i >= 0) {
+        if (str[i] == ' ') {
+            /* Replace each space with '%20' */
+            str[len] = '0';
+            str[len - 1] = '2';
+            str[len - 2] = '%';
+            len -= 3;
+        } else {
+            str[len] = str[i];
+            len--;
+        }
+        i--;
+    }
+
+    return str;
 }
 
 int main(int argc, char **argv) {
@@ -17,6 +55,7 @@ int main(int argc, char **argv) {
 
     for (i = 1; i < argc; i++) {
         strcpy(buffer, argv[i]);
+        URLify(buffer);
         printf("\"%s\" URLify: \"%s\"\n", argv[i], buffer);
     }
 
