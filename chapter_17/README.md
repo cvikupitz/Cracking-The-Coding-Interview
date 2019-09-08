@@ -149,7 +149,8 @@ Imagine a histogram (bar graph). Design an algorithm to compute the volume of wa
 
 _EXAMPLE_ (Black bars are the histogram. Gray is water.)
 
-<p align="center"><img src="figure-17-21.png" alt="Figure 17-21"></p>
+<p align="center"><img src="img/figure-17-21.png" alt="Figure 17-21"></p>
+
 Output: 26
 
 #### 17.22 - Word Transformer
