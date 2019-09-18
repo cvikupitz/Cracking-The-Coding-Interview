@@ -58,7 +58,7 @@ static int oneEditAway(char *s1, char *s2) {
         /* string length equal, check for one edit away */
         case 0:
             return oneSwitchAway(s1, s2);
-        /* string lengths differ by 1m check for insertion/deletion */
+        /* string lengths differ by 1, check for insertion/deletion */
         case 1:
             return oneDeleteAway(s1, s2);
         case -1:

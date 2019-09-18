@@ -39,7 +39,7 @@ int main(int argc, char **argv) {
     int i;
 
     if (argc < 2) {
-        printf("Usage: %s str ...\n", argv[0]);
+        printf("USAGE: %s str ...\n", argv[0]);
         return 0;
     }
 
