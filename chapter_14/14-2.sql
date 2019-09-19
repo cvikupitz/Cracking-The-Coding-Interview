@@ -14,4 +14,3 @@ LEFT JOIN
    WHERE Requests.Status = 'OPEN'
    GROUP BY Apartments.BuildingID) ReqCounts
 ON ReqCounts.BuildingID = Buildings.BuildingID;
-  
