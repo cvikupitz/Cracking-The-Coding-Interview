@@ -18,7 +18,7 @@ public class AnimalShelter {
          *
          * @param name The name to assign.
          */
-        public Animal(String name) {
+        Animal(String name) {
             this.name = name;
         }
 
@@ -66,7 +66,7 @@ public class AnimalShelter {
         /**
          * Creates a new cat.
          */
-        public Cat(String name) {
+        Cat(String name) {
             super(name);
         }
 
@@ -74,7 +74,7 @@ public class AnimalShelter {
          * {@inheritDoc}
          */
         @Override
-        public String getType() {
+        String getType() {
             return "Cat";
         }
     }
@@ -87,7 +87,7 @@ public class AnimalShelter {
         /**
          * Creates a new dog.
          */
-        public Dog(String name) {
+        Dog(String name) {
             super(name);
         }
 
@@ -95,7 +95,7 @@ public class AnimalShelter {
          * {@inheritDoc}
          */
         @Override
-        public String getType() {
+        String getType() {
             return "Dog";
         }
     }
