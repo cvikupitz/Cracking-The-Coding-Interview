@@ -51,6 +51,10 @@ static void nullifyColumn(int matrix[ROWS][COLUMNS], int column) {
         matrix[i][column] = 0;
 }
 
+/*
+ * Scans the specified matrix for any occuring zeros, then zeros out all
+ * rows and columns in the matrix where the zeros occur.
+ */
 static void scan_matrix_zeros(int matrix[ROWS][COLUMNS]) {
 
     int i, j;
