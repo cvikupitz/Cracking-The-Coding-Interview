@@ -18,7 +18,7 @@ public class StackMin {
          * @param item The node's payload.
          * @param min The minimum element in this sub-stack.
          * @param next Pointer to the next node.
-         * */
+         */
         Node(int item, int min, Node next) {
             this.item = item;
             this.min = min;
