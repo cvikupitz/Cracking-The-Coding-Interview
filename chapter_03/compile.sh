@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-#javac ThreeInOne.java
+javac ThreeInOne.java
 javac StackMin.java
 javac StackOfPlates.java
 javac MyQueue.java
