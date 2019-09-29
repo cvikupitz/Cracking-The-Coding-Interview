@@ -2,9 +2,8 @@
  * 12-1.cpp
  * Author: Cole Vikupitz
  *
- * Exercise 12-1 from Cracking the Coding Interview, 6th edition.
+ * Solution to exercise 12-1 from Cracking the Coding Interview, 6th edition.
  *
- * Prints the last K lines of a given file.
  */
 
 #include <iostream>
@@ -13,7 +12,6 @@
 #include <string>
 
 using namespace std;
-
 
 int main(int argc, char **argv) {
 
@@ -52,7 +50,7 @@ int main(int argc, char **argv) {
         i = ((i + 1) % k);
         nlines++;
     }
-    
+
     /* List may be out of order, need to find index of Kth last line to print */
     offset = (nlines % k);
     for (i = 0; i < k; i++) {
