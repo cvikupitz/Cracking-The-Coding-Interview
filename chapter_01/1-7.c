@@ -6,64 +6,73 @@
  */
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
-#define DIMENSION 12  /* Specifies the matrix dimension (NxN) */
+#define N 6             /* Specifies the dimension of the matrix */
+#define ROTATIONS 1     /* Number of rotations to make */
+
 
 /*
- * Assigns all cells inside the specified matrix 'matrix' with random integers.
+ * Prints the image matrix out.
  */
-static void randomize_matrix(int matrix[DIMENSION][DIMENSION]) {
+void printImage(int img[N][N]) {
 
     int i, j;
 
-    /* Use time for random seed */
-    srand(time(0));
-    for (i = 0; i < DIMENSION; i++) {
-        for (j = 0; j < DIMENSION; j++) {
-            /* Assigns the pixel a random integer */
-            matrix[i][j] = ( rand() % 10 );
+    for (i = 0; i < N; i++) {
+        for (j = 0; j < N; j++) {
+            printf("%02d ", img[i][j]);
         }
+        puts("");
     }
 }
 
-/*
- * Rotates the specified matrix 'matrix' to the right in place.
- */
-static void rotate_matrix(int matrix[DIMENSION][DIMENSION]) {
-
-    //FIXME
-}
 
 /*
- * Prints out the specified integer matrix 'matrix' to standard output.
+ * Rotates the matrix 'img' 90 degrees clockwise in place.
  */
-static void print_matrix(int matrix[DIMENSION][DIMENSION]) {
+void rotateImage(int img[N][N]) {
 
-    int i, j;
-    for (i = 0; i < DIMENSION; i++) {
-        for (j = 0; j < DIMENSION; j++) {
-            printf("%d ", matrix[i][j]);
+    int i, j, temp, offset;
+
+    offset = 0;
+    for (i = 0; i < (N / 2); i++) {
+        for (j = 0; j < (N - i - offset - 1); j++) {
+            /* Save top left pixel */
+            temp = img[i][j + offset];
+            /* Set top left pixel as bottom left pixel */
+            img[i][j+offset] = img[N-1-(j+offset)][i];
+            /* Set bottom left pixel as bottom right pixel */
+            img[N-1-(j+offset)][i] = img[N-1-i][N-1-(j+offset)];
+            /* Set bottom right pixel as top right pixel */
+            img[N -1-i][N-1-(j+offset)] = img[j+offset][N-1-offset];
+            /* Set top right pixel as top left pixel */
+            img[j+offset][N-1-offset] = temp;
         }
-        printf("\n");
+        offset++;
     }
 }
 
-#define UNUSED __attribute__((unused))
-int main(UNUSED int argc, UNUSED char **argv) {
 
-    int matrix[DIMENSION][DIMENSION];
+int main(void) {
 
-    randomize_matrix(matrix);
-    printf("The original matrix:\n");
-    print_matrix(matrix);
-    printf("\n");
+    int img[N][N];
+    int i, j, val;
 
-    rotate_matrix(matrix);
-    printf("The matrix rotated to the right:\n");
-    print_matrix(matrix);
-    printf("\n");
+    /* Initialize the image matrix */
+    val = 1;
+    for (i = 0; i < N; i++)
+        for (j = 0; j < N; j++)
+            img[i][j] = val++;
+
+    /* Print image before rotation(s) */
+    puts("Image before rotation:");
+    printImage(img);
+
+    /* Rotate image N times, print modified image */
+    for (i = 0; i < ROTATIONS; i++)
+        rotateImage(img);
+    printf("\nImage after %d rotation(s):\n", ROTATIONS);
+    printImage(img);
 
     return 0;
 }
