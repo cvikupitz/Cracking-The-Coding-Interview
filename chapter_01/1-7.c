@@ -6,10 +6,28 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-#define N 6             /* Specifies the dimension of the matrix */
-#define ROTATIONS 1     /* Number of rotations to make */
+#define N 10   /* Specifies the dimension of the matrix */
 
+/*
+ * Randomizes the values inside the cells of the specified matrix.
+ */
+static void randomize_matrix(int img[N][N]) {
+
+    int val, i, j;
+    /* Use time for random seed */
+    srand(time(0));
+
+    for (i = 0; i < N; i++) {
+        for (j = 0; j < N; j++) {
+            /* Populate cell with random digit */
+            val = ( rand() % 10 );
+            img[i][j] = val;
+        }
+    }
+}
 
 /*
  * Prints the image matrix out.
@@ -20,7 +38,7 @@ void printImage(int img[N][N]) {
 
     for (i = 0; i < N; i++) {
         for (j = 0; j < N; j++) {
-            printf("%02d ", img[i][j]);
+            printf("%d ", img[i][j]);
         }
         puts("");
     }
@@ -56,22 +74,13 @@ void rotateImage(int img[N][N]) {
 int main(void) {
 
     int img[N][N];
-    int i, j, val;
 
-    /* Initialize the image matrix */
-    val = 1;
-    for (i = 0; i < N; i++)
-        for (j = 0; j < N; j++)
-            img[i][j] = val++;
-
-    /* Print image before rotation(s) */
+    randomize_matrix(img);
     puts("Image before rotation:");
     printImage(img);
 
-    /* Rotate image N times, print modified image */
-    for (i = 0; i < ROTATIONS; i++)
-        rotateImage(img);
-    printf("\nImage after %d rotation(s):\n", ROTATIONS);
+    rotateImage(img);
+    printf("\nImage after rotation:\n");
     printImage(img);
 
     return 0;
