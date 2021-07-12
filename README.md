@@ -3,20 +3,20 @@ Model solutions for interview problems from Cracking the Coding Interview, 6th e
 
 ### Chapters
 
-* Arrays & Strings
-* Linked Lists
-* Stacks & Queues
-* Trees & Graphs
-* Bit Manipulation
-* Math & Logic Puzzles
-* Object-Oriented Design
-* Recursion & Dynamic Programming
-* System Design & Scalability
-* Sorting & Searching
-* Testing
-* C & C++
-* Java
-* Databases
-* Threads & Locks
-* Moderate Problems
-* Hard Problems
+* 1 - Arrays & Strings
+* 2 - Linked Lists
+* 3 - Stacks & Queues
+* 4 - Trees & Graphs
+* 5 - Bit Manipulation
+* 6 - Math & Logic Puzzles
+* 7 - Object-Oriented Design
+* 8 - Recursion & Dynamic Programming
+* 9 - System Design & Scalability
+* 10 - Sorting & Searching
+* 11 - Testing
+* 12 - C & C++
+* 13 - Java
+* 14 - Databases
+* 15 - Threads & Locks
+* 16 - Moderate Problems
+* 17 - Hard Problems
